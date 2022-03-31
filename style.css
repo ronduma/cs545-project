@@ -2,15 +2,24 @@
   max-width: 960px;
 }
 
+/*
+ * Fonts
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+ @import url(//db.onlinewebfonts.com/c/ee2d6efb70dae6b477d30df1fd294972?family=Bitstream+Iowan+Old+Style);
+ @font-face {
+   font-family: "Bitstream Iowan Old Style"; 
+   src: url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.eot"); 
+   src: url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.woff") format("woff"), url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.svg#Bitstream Iowan Old Style") format("svg"); 
+ }
+ 
 /* 
  * General
  */
 
-@import url(//db.onlinewebfonts.com/c/ee2d6efb70dae6b477d30df1fd294972?family=Bitstream+Iowan+Old+Style);
-@font-face {
-  font-family: "Bitstream Iowan Old Style"; 
-  src: url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.eot"); 
-  src: url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.woff") format("woff"), url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.svg#Bitstream Iowan Old Style") format("svg"); 
+html {
+  scroll-behavior: smooth;
 }
 
 div {
@@ -25,18 +34,28 @@ div {
  * Custom translucent site header
  */
 
+.navbtn {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size:24px;
+}
+
 .site-header {
   background-color: rgba(0, 0, 0, .85);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
 }
 .site-header a {
-  color: #8e8e8e;
+  color: black;
+  font-family: 'Inter', sans-serif;
+  font-size:28px;
+  font-weight: 600;
   transition: color .15s ease-in-out;
+  text-decoration: none;
 }
 .site-header a:hover {
-  color: #fff;
-  text-decoration: none;
+  color: black;
+  text-decoration: hover;
 }
 
 /*
@@ -85,4 +104,12 @@ div {
   .flex-md-equal > * {
     flex: 1;
   }
+}
+
+/*
+ * Specifics
+ */
+
+#logo {
+  font-weight:400;
 }
