@@ -56,6 +56,7 @@ div {
 .site-header a:hover {
   color: black;
   text-decoration: underline;
+  text-decoration-color: #46B1C9;
 }
 
 /*
@@ -92,6 +93,18 @@ div {
   background-color: #e5e5e5;
 }
 
+/*
+ * Play
+ */
+
+.choice {
+  padding: 25px 30px;
+}
+
+.choice:focus{
+  background-color: #46B1C9;
+  color: white;
+}
 
 /*
  * Extra utilities
