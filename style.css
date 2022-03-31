@@ -55,7 +55,7 @@ div {
 }
 .site-header a:hover {
   color: black;
-  text-decoration: hover;
+  text-decoration: underline;
 }
 
 /*
