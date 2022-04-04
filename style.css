@@ -37,22 +37,29 @@ div {
 .navbtn {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  font-size:24px;
+  font-size: 12px;
+  line-height: normal;
+  text-align: center;
+  height: 25px;
+  width: 75px;
 }
 
 .site-header {
+  height: 51px;
   background-color: rgba(0, 0, 0, .85);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
 }
 .site-header a {
+  padding: 12px 25px;
   color: black;
   font-family: 'Inter', sans-serif;
-  font-size:28px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 400;
   transition: color .15s ease-in-out;
   text-decoration: none;
 }
+
 .site-header a:hover {
   color: black;
   text-decoration: underline;
@@ -98,12 +105,15 @@ div {
  */
 
 .choice {
-  padding: 25px 30px;
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
 }
 
-.choice:focus{
+.selected {
   background-color: #46B1C9;
-  color: white;
+  color: #FBFBF5;
+  border: none;
 }
 
 /*
@@ -125,4 +135,44 @@ div {
 
 #logo {
   font-weight:400;
+}
+
+/* 
+  Button Styling 
+*/
+
+.primary-btn {
+  padding: 0;
+  margin: 0 10px;
+  background-color: #393E41;
+  color: #FFFFFF;
+  border: none;
+}
+
+.primary-btn:hover {
+  background-color: #6B6E71;
+  color: #FFFFFF;
+}
+
+.primary-btn:active {
+  background-color: #2B2F31;
+  color: #FFFFFF;
+}
+
+.secondary-btn {
+  padding: 0;
+  margin: 0 10px;
+  background-color: #FBFBF5;
+  color: #000000;
+  border: 1px solid #393E41;
+}
+
+.secondary-btn:hover {
+  background-color: #F6F7EB;
+  color: #000000;
+}
+
+.secondary-btn:active {
+  background-color: #E7E8DE;
+  color: #000000;
 }

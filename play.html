@@ -46,13 +46,13 @@
       [Website Name]
     </a>
     <div class="justify-content-center">
-      <a class="py-2 mx-5" href="play.html" style="text-decoration:underline; text-decoration-color:#46B1C9;">Play</a>
-      <a class="py-2 mx-5" href="learn.html">Learn</a>
-      <a class="py-2 mx-5" href="about.html">About</a>
+      <a class="" href="play.html" style="text-decoration:underline; text-decoration-color:#46B1C9;">Play</a>
+      <a class="" href="learn.html">Learn</a>
+      <a class="" href="about.html">About</a>
     </div>
     <div class="justify-content-end">
-      <button class="btn navbtn btn-light border border-dark px-4 py-2 mx-2 rounded-pill">Sign Up</button>
-      <button class="btn navbtn btn-dark px-4 py-2 mx-2 rounded-pill">Log In</button>
+      <button class="navbtn rounded-pill secondary-btn">Sign Up</button>
+      <button class="navbtn rounded-pill primary-btn">Log In</button>
     </div>
   </nav>
 </header>
@@ -63,11 +63,11 @@
         <h1>Match the Notes [Or a different title to the game?]</h1>
         <h3>But first, how many questions would you like to play?</h3>
         <div class="py-5" style="font-family: 'Inter', sans-serif">
-            <button class="lead border border-dark mx-3 rounded-circle choice">10</button>
-            <button class="lead border border-dark mx-3 rounded-circle choice">20</button>
-            <button class="lead border border-dark mx-3 rounded-circle choice">30</button>
+            <button id="option-1" class="lead mx-3 rounded-circle choice secondary-btn" onclick="select('option-1')">10</button>
+            <button id="option-2" class="lead mx-3 rounded-circle choice secondary-btn" onclick="select('option-2')">20</button>
+            <button id="option-3" class="lead mx-3 rounded-circle choice secondary-btn" onclick="select('option-3')">30</button>
         </div>
-        <button class="lead btn-dark px-4 py-2 rounded-pill" style="font-family: 'Inter', sans-serif">Let's Play!</button>
+        <button class="px-4 py-2 rounded-pill primary-btn" style="font-family: 'Inter', sans-serif">Let's Play!</button>
     </div>
   </div>
 
@@ -78,6 +78,21 @@
 
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function select(id) {
+        let choices = document.getElementsByClassName("choice");
+        for (let i = 0; i < choices.length; i++) {
+          choices[i].classList.remove("selected");
+          choices[i].classList.add("secondary-btn");
+        }
+        let current = document.getElementById(id);
+        current.classList.remove("secondary-btn");
+        current.classList.add("selected");
+        
+        // option.style.backgroundColor = "#46B1C9";
+        // option.style.color = "#FBFBF5";
+      }
+    </script>
 
       
   </body>
