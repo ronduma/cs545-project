@@ -1,69 +1,78 @@
 .container {
-  max-width: 960px;
+    max-width: 960px;
 }
 
 /*
  * Fonts
  */
- @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 
- @import url(//db.onlinewebfonts.com/c/ee2d6efb70dae6b477d30df1fd294972?family=Bitstream+Iowan+Old+Style);
- @font-face {
-   font-family: "Bitstream Iowan Old Style"; 
-   src: url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.eot"); 
-   src: url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.woff") format("woff"), url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.svg#Bitstream Iowan Old Style") format("svg"); 
- }
- 
+@import url(//db.onlinewebfonts.com/c/ee2d6efb70dae6b477d30df1fd294972?family=Bitstream+Iowan+Old+Style);
+@font-face {
+    font-family: "Bitstream Iowan Old Style";
+    src: url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.eot");
+    src: url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.eot?#iefix")
+            format("embedded-opentype"),
+        url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.woff2")
+            format("woff2"),
+        url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.woff")
+            format("woff"),
+        url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.ttf")
+            format("truetype"),
+        url("//db.onlinewebfonts.com/t/ee2d6efb70dae6b477d30df1fd294972.svg#Bitstream Iowan Old Style")
+            format("svg");
+}
+
 /* 
  * General
  */
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 div {
-  font-family:"Bitstream Iowan Old Style"; 
+    font-family: "Bitstream Iowan Old Style";
 }
 
 /*
  * Navbar
  */
- 
+
 /*
  * Custom translucent site header
  */
 
 .navbtn {
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: normal;
-  text-align: center;
-  height: 25px;
-  width: 75px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: normal;
+    text-align: center;
+    height: 25px;
+    width: 75px;
 }
 
 .site-header {
-  height: 51px;
-  background-color: rgba(0, 0, 0, .85);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
+    height: 51px;
+    background-color: rgba(0, 0, 0, 0.85);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
 }
 .site-header a {
-  padding: 12px 25px;
-  color: black;
-  font-family: 'Inter', sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  transition: color .15s ease-in-out;
-  text-decoration: none;
+    padding: 12px 25px;
+    color: black;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    transition: color 0.15s ease-in-out;
+    text-decoration: none;
 }
 
 .site-header a:hover {
-  color: black;
-  text-decoration: underline;
-  text-decoration-color: #46B1C9;
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: #46b1c9;
 }
 
 /*
@@ -71,33 +80,33 @@ div {
  */
 
 .product-device {
-  position: absolute;
-  right: 10%;
-  bottom: -30%;
-  width: 300px;
-  height: 540px;
-  background-color: #333;
-  border-radius: 21px;
-  transform: rotate(30deg);
+    position: absolute;
+    right: 10%;
+    bottom: -30%;
+    width: 300px;
+    height: 540px;
+    background-color: #333;
+    border-radius: 21px;
+    transform: rotate(30deg);
 }
 
 .product-device::before {
-  position: absolute;
-  top: 10%;
-  right: 10px;
-  bottom: 10%;
-  left: 10px;
-  content: "";
-  background-color: rgba(255, 255, 255, .1);
-  border-radius: 5px;
+    position: absolute;
+    top: 10%;
+    right: 10px;
+    bottom: 10%;
+    left: 10px;
+    content: "";
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
 }
 
 .product-device-2 {
-  top: -25%;
-  right: auto;
-  bottom: 0;
-  left: 5%;
-  background-color: #e5e5e5;
+    top: -25%;
+    right: auto;
+    bottom: 0;
+    left: 5%;
+    background-color: #e5e5e5;
 }
 
 /*
@@ -105,15 +114,15 @@ div {
  */
 
 .choice {
-  width: 60px;
-  height: 60px;
-  font-size: 20px;
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
 }
 
 .selected {
-  background-color: #46B1C9;
-  color: #FBFBF5;
-  border: none;
+    background-color: #46b1c9;
+    color: #fbfbf5;
+    border: none;
 }
 
 /*
@@ -121,12 +130,12 @@ div {
  */
 
 .flex-equal > * {
-  flex: 1;
+    flex: 1;
 }
 @media (min-width: 768px) {
-  .flex-md-equal > * {
-    flex: 1;
-  }
+    .flex-md-equal > * {
+        flex: 1;
+    }
 }
 
 /*
@@ -134,7 +143,7 @@ div {
  */
 
 #logo {
-  font-weight:400;
+    font-weight: 400;
 }
 
 /* 
@@ -142,37 +151,75 @@ div {
 */
 
 .primary-btn {
-  padding: 0;
-  margin: 0 10px;
-  background-color: #393E41;
-  color: #FFFFFF;
-  border: none;
+    padding: 0;
+    margin: 0 10px;
+    background-color: #393e41;
+    color: #ffffff;
+    border: none;
 }
 
 .primary-btn:hover {
-  background-color: #6B6E71;
-  color: #FFFFFF;
+    background-color: #6b6e71;
+    color: #ffffff;
 }
 
 .primary-btn:active {
-  background-color: #2B2F31;
-  color: #FFFFFF;
+    background-color: #2b2f31;
+    color: #ffffff;
 }
 
 .secondary-btn {
-  padding: 0;
-  margin: 0 10px;
-  background-color: #FBFBF5;
-  color: #000000;
-  border: 1px solid #393E41;
+    padding: 0;
+    margin: 0 10px;
+    background-color: #fbfbf5;
+    color: #000000;
+    border: 1px solid #393e41;
 }
 
 .secondary-btn:hover {
-  background-color: #F6F7EB;
-  color: #000000;
+    background-color: #f6f7eb;
+    color: #000000;
 }
 
 .secondary-btn:active {
-  background-color: #E7E8DE;
-  color: #000000;
+    background-color: #e7e8de;
+    color: #000000;
+}
+
+.sidenav {
+    height: 641px;
+    width: 360px;
+    position: absolute;
+    top: 149px;
+    left: 0;
+    background-color: #f8f9f0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    color: black;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    transition: color 0.15s ease-in-out;
+    text-decoration: none;
+}
+
+.sidebar-left-header {
+    padding-left: 10px;
+}
+
+#sidebar-left {
+    padding-left: 10px;
+}
+
+img {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
