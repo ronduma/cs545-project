@@ -1,78 +1,152 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.84.0">
-    <title>Home · [Website Name]</title>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="" />
+        <meta
+            name="author"
+            content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+        />
+        <meta name="generator" content="Hugo 0.84.0" />
+        <title>Home · [Website Name]</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/product/">
+        <link
+            rel="canonical"
+            href="https://getbootstrap.com/docs/5.0/examples/product/"
+        />
 
-    <!-- Iowan Old Style Font -->
-    <link href="//db.onlinewebfonts.com/c/ee2d6efb70dae6b477d30df1fd294972?family=Bitstream+Iowan+Old+Style" rel="stylesheet" type="text/css"/>
+        <!-- Iowan Old Style Font -->
+        <link
+            href="//db.onlinewebfonts.com/c/ee2d6efb70dae6b477d30df1fd294972?family=Bitstream+Iowan+Old+Style"
+            rel="stylesheet"
+            type="text/css"
+        />
 
+        <!-- Bootstrap core CSS -->
+        <link href="bootstrap.min.css" rel="stylesheet" />
 
+        <style>
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
+            }
 
-    <!-- Bootstrap core CSS -->
-    <link href="bootstrap.min.css" rel="stylesheet">
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+                }
+            }
+        </style>
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
+        <!-- Custom styles for this template -->
+        <link href="style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header
+            class="site-header py-1 justify-content-start"
+            style="background-color: white"
+        >
+            <nav class="navbar navbar-light static-top">
+                <a class="ps-5 py-2" id="logo" href="index.html">
+                    [Website Name]
+                </a>
+                <div class="justify-content-center">
+                    <a class="" href="play.html">Play</a>
+                    <a
+                        class=""
+                        href="learn.html"
+                        style="
+                            text-decoration: underline;
+                            text-decoration-color: #46b1c9;
+                        "
+                        >Learn</a
+                    >
+                    <a class="" href="about.html">About</a>
+                </div>
+                <div class="justify-content-end">
+                    <button class="navbtn rounded-pill secondary-btn">
+                        Sign Up
+                    </button>
+                    <button class="navbtn rounded-pill primary-btn">
+                        Log In
+                    </button>
+                </div>
+            </nav>
+        </header>
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
+        <main>
+            <div id="mySidenav" class="sidenav py-5 text-left overflow-hidden">
+                <h2 class="sidebar-left-header">Sight reading</h2>
+                <a href="#">&#8594; Scales</a>
+                <a href="#">&#8594; Goals</a>
+                <a href="#faq" id="sidebar-left">FAQ</a>
+                <a href="#">&#8594;Where can I find more resources?</a>
+                <a href="#">&#8594; Importance of sight reading?</a>
+            </div>
+            <div class="py-5 text-left overflow-hidden">
+                <div class="col-md-8 p-lg-5 mx-auto my-5">
+                    <h1 class="display-4 fw-normal">What is Sight Reading?</h1>
+                    <p class="lead fw-normal">
+                        Sight Reading is actively reading a piece of music
+                        without the help of our muscle memory. Sight Reading is
+                        not an inherent gene that musicians are born with, but a
+                        skill that can be improved and developed through
+                        practice. Sight reading has a steep learning curve as
+                        many individuals have trouble even grasping what the
+                        notes mean and quit before mastering the basics. That
+                        being said, sight reading is such a crucial aspect of
+                        music.
+                    </p>
+                    <h1 class="display-4 fw-normal">What are Clefs?</h1>
+                    <p class="lead fw-normal">
+                        Clefs simply is a type of music notation or symbol that
+                        is placed at the beginning of the staff. This will
+                        indicate the specific pitch of certain notes. The two
+                        most common clefs today are Treble and Bass Clef.
+                    </p>
+                    <img src="./images/clefs.png" />
+                    <p class="lead fw-normal">
+                        The treble clef is a symbol denoted for all of the notes
+                        that are above the middle C. This is also known as the G
+                        clef since the curl of the clef encircles around the
+                        line where the G note falls on. For keyboard or piano
+                        instruments, the treble clef would be displayed on the
+                        upper half of the staff.
+                        <br />
+                        <br />
+                        The bass clef is a symbol denoted for all of the notes
+                        that are below the middle C. This is also known as the F
+                        clef since the two dots in the bass clef are between the
+                        line where the F note falls on. For keyboard or piano
+                        instruments, the bass clef would be displayed on the
+                        lower half of the staff.
+                    </p>
+                    <h2 class="h2 fw-normal">C Major:</h2>
+                    <img src="./images/cmajor.png" />
+                    <h2 class="h2 fw-normal">
+                        Mnemonics for the Treble and Bass Clef:
+                    </h2>
+                    <ul>
+                        <li class="lead fw-normal">
+                            Every Good Boy Does Fine (On the line from bottom to
+                            top treble clef)
+                        </li>
+                        <li class="lead fw-normal">
+                            All Cows Eat Grass (Between the line from bottom to
+                            top bass clef)
+                        </li>
+                        <li class="lead fw-normal">FACE (spaces)</li>
+                    </ul>
+                    <h1 class="display-4 fw-normal" id="faq">FAQ</h1>
+                </div>
+            </div>
+        </main>
+        <footer class="container py-5"></footer>
 
-    
-    <!-- Custom styles for this template -->
-    <link href="style.css" rel="stylesheet">
-  </head>
-  <body>
-    
-<header class="site-header py-1 justify-content-start" style="background-color:white">
-  <nav class="navbar navbar-light static-top">
-    <a class="ps-5 py-2" id="logo" href="index.html">
-      [Website Name]
-    </a>
-    <div class="justify-content-center">
-      <a class="" href="play.html">Play</a>
-      <a class="" href="learn.html" style="text-decoration:underline; text-decoration-color:#46B1C9;">Learn</a>
-      <a class="" href="about.html">About</a>
-    </div>
-    <div class="justify-content-end">
-      <button class="navbtn rounded-pill secondary-btn">Sign Up</button>
-      <button class="navbtn rounded-pill primary-btn">Log In</button>
-    </div>
-  </nav>
-</header>
-
-<main>
-  <div class="overflow-hidden p-3 p-md-5 m-md-3 text-center ">
-    <div class="col-md-8 p-lg-5 mx-auto my-5">
-      <h1 class="display-4 fw-normal">What is Sight Reading?</h1>
-      
-    </div>
-  </div>
-
-</main>
-<footer class="container py-5">
-  
-</footer>
-
-
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
-      
-  </body>
+        <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
 </html>

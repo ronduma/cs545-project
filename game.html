@@ -51,19 +51,9 @@
             style="background-color: white"
         >
             <nav class="navbar navbar-light static-top">
-                <a class="ps-5 py-2" id="logo" href="index.html">
-                    [Website Name]
-                </a>
+                <a class="ps-5 py-2" id="logo" href="#"> [Website Name] </a>
                 <div class="justify-content-center">
-                    <a
-                        class=""
-                        href="play.html"
-                        style="
-                            text-decoration: underline;
-                            text-decoration-color: #46b1c9;
-                        "
-                        >Play</a
-                    >
+                    <a class="" href="play.html">Play</a>
                     <a class="" href="learn.html">Learn</a>
                     <a class="" href="about.html">About</a>
                 </div>
@@ -79,44 +69,67 @@
         </header>
 
         <main>
-            <div class="overflow-hidden p-3 p-md-5 m-md-3 text-center">
-                <div class="">
-                    <h1>Match the Notes [Or a different title to the game?]</h1>
-                    <h3>
-                        But first, how many questions would you like to play?
-                    </h3>
-                    <div class="py-5" style="font-family: 'Inter', sans-serif">
+            <div id="game-questions">
+                <h3 class="ps-5 py-2 mt-3">Match The Notes</h3>
+                <div class="container">
+                    <div class="row">
+                        <!-- Question and Score will get data from the javascript and change -->
+                        <div class="col" id="question">Question:</div>
+                        <div class="col text-end" id="score">Score:</div>
+                    </div>
+                    <div class="row">
+                        <!-- <img /> Random image of note from images/notes -->
+                        <img id="note-image" src="" />
+                    </div>
+                    <div
+                        class="row d-flex justify-content-center"
+                        id="display-message"
+                    ></div>
+                    <div
+                        class="py-5 d-flex justify-content-center"
+                        style="font-family: 'Inter', sans-serif"
+                    >
                         <button
-                            id="option-1"
+                            id="answer-1"
                             class="lead mx-3 rounded-circle choice secondary-btn"
-                            onclick="select('option-1')"
+                            onclick="submit('answer-1')"
                         >
-                            10
+                            C
                         </button>
                         <button
-                            id="option-2"
+                            id="answer-2"
                             class="lead mx-3 rounded-circle choice secondary-btn"
-                            onclick="select('option-2')"
+                            onclick="submit('answer-2')"
                         >
-                            20
+                            D
                         </button>
                         <button
-                            id="option-3"
+                            id="answer-3"
                             class="lead mx-3 rounded-circle choice secondary-btn"
-                            onclick="select('option-3')"
+                            onclick="submit('answer-3')"
                         >
-                            30
+                            E
+                        </button>
+                        <button
+                            id="answer-4"
+                            class="lead mx-3 rounded-circle choice secondary-btn"
+                            onclick="submit('answer-4')"
+                        >
+                            F
                         </button>
                     </div>
-                    <button
-                        class="px-4 py-2 rounded-pill primary-btn"
-                        style="font-family: 'Inter', sans-serif"
-                        onclick="startGame()"
-                    >
-                        Let's Play!
-                    </button>
+                    <div class="row d-flex justify-content-right">
+                        <button
+                            id="next-question"
+                            style="display: none"
+                            onclick="changeQuestion()"
+                        >
+                            Next Question
+                        </button>
+                    </div>
                 </div>
             </div>
+            <div id="game-results"></div>
         </main>
         <footer class="container py-5"></footer>
 
