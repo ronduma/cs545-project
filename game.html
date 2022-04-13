@@ -69,55 +69,67 @@
         </header>
 
         <main>
-            <h3 class="ps-5 py-2 mt-3">Match The Notes</h3>
-            <div class="container">
-                <div class="row">
-                    <!-- Question and Score will get data from the javascript and change -->
-                    <div class="col" id="question">Question:</div>
-                    <div class="col text-end" id="score">Score:</div>
-                </div>
-                <div class="row">
-                    <!-- <img /> Random image of note from images/notes -->
-                    <img id="note-image" src="" />
-                </div>
-                <div
-                    class="row d-flex justify-content-center"
-                    id="display-message"
-                ></div>
-                <div
-                    class="py-5 d-flex justify-content-center"
-                    style="font-family: 'Inter', sans-serif"
-                >
-                    <button
-                        id="answer-1"
-                        class="lead mx-3 rounded-circle choice secondary-btn"
-                        onclick="submit('answer-1')"
+            <div id="game-questions">
+                <h3 class="ps-5 py-2 mt-3">Match The Notes</h3>
+                <div class="container">
+                    <div class="row">
+                        <!-- Question and Score will get data from the javascript and change -->
+                        <div class="col" id="question">Question:</div>
+                        <div class="col text-end" id="score">Score:</div>
+                    </div>
+                    <div class="row">
+                        <!-- <img /> Random image of note from images/notes -->
+                        <img id="note-image" src="" />
+                    </div>
+                    <div
+                        class="row d-flex justify-content-center"
+                        id="display-message"
+                    ></div>
+                    <div
+                        class="py-5 d-flex justify-content-center"
+                        style="font-family: 'Inter', sans-serif"
                     >
-                        C
-                    </button>
-                    <button
-                        id="answer-2"
-                        class="lead mx-3 rounded-circle choice secondary-btn"
-                        onclick="submit('answer-2')"
-                    >
-                        D
-                    </button>
-                    <button
-                        id="answer-3"
-                        class="lead mx-3 rounded-circle choice secondary-btn"
-                        onclick="submit('answer-3')"
-                    >
-                        E
-                    </button>
-                    <button
-                        id="answer-4"
-                        class="lead mx-3 rounded-circle choice secondary-btn"
-                        onclick="submit('answer-4')"
-                    >
-                        F
-                    </button>
+                        <button
+                            id="answer-1"
+                            class="lead mx-3 rounded-circle choice secondary-btn"
+                            onclick="submit('answer-1')"
+                        >
+                            C
+                        </button>
+                        <button
+                            id="answer-2"
+                            class="lead mx-3 rounded-circle choice secondary-btn"
+                            onclick="submit('answer-2')"
+                        >
+                            D
+                        </button>
+                        <button
+                            id="answer-3"
+                            class="lead mx-3 rounded-circle choice secondary-btn"
+                            onclick="submit('answer-3')"
+                        >
+                            E
+                        </button>
+                        <button
+                            id="answer-4"
+                            class="lead mx-3 rounded-circle choice secondary-btn"
+                            onclick="submit('answer-4')"
+                        >
+                            F
+                        </button>
+                    </div>
+                    <div class="row d-flex justify-content-right">
+                        <button
+                            id="next-question"
+                            style="display: none"
+                            onclick="changeQuestion()"
+                        >
+                            Next Question
+                        </button>
+                    </div>
                 </div>
             </div>
+            <div id="game-results"></div>
         </main>
         <footer class="container py-5"></footer>
 
