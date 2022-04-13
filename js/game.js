@@ -199,7 +199,7 @@ function displayScore() {
     scorediv.innerHTML = `
     <div class="card">
     <div class="card-body">
-      <h4 class="card-title">Results</h4>
+      <h4 class="card-title">Game Results</h4>
       <p>Score ${correct}</p>
       <p>Percent Correct ${correct}/${numOfQuestions}</p>
       <p>Time ${(endTime - startTime) / 1000} seconds</p>
