@@ -8,11 +8,6 @@ let startTime = Date.now();
 let endTime;
 const images = [
     {
-        image: "./images/notes/middle_c.png",
-        choices: ["A", "D", "E", "C"],
-        answer: "C",
-    },
-    {
         image: "./images/notes/A4.svg",
         choices: ["B", "A", "C", "F"],
         answer: "A"
