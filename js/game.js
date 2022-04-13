@@ -1,7 +1,7 @@
 let selected = false;
 let questionNumber = 1;
 let correct = 0;
-let numOfQuestions = 10;
+let numOfQuestions;
 
 function select(id) {
     selected = true;
@@ -29,6 +29,9 @@ function startGame() {
 
 const urlParams = new URLSearchParams(window.location.search);
 numOfQuestions = urlParams.get("questions");
+if (numOfQuestions === null) {
+    numOfQuestions = 10;
+}
 
 let questionElem = document.getElementById("question");
 questionElem.innerHTML = `Question: ${questionNumber}`;
