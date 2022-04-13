@@ -2,6 +2,36 @@ let selected = false;
 let questionNumber = 1;
 let correct = 0;
 let numOfQuestions;
+let firstAttempt = true;
+const images = [
+    {
+        image: "./images/notes/middle_c.png",
+        choices: ["A", "D", "E", "C"],
+        answer: "C",
+    },
+];
+
+let noteIndex = Math.floor(Math.random() * images.length);
+
+let image = document.getElementById("note-image"); //
+image.src = images[noteIndex].image;
+
+for (let i = 1; i < 5; i++) {
+    let answerChoice = document.getElementById(`answer-${i}`);
+    answerChoice.innerHTML = images[noteIndex].choices[i - 1];
+}
+
+const urlParams = new URLSearchParams(window.location.search);
+numOfQuestions = urlParams.get("questions");
+if (numOfQuestions === null) {
+    numOfQuestions = 10;
+}
+
+let questionElem = document.getElementById("question");
+questionElem.innerHTML = `Question: ${questionNumber}`;
+
+let scoreElem = document.getElementById("score");
+scoreElem.innerHTML = `Score: ${correct}/${numOfQuestions}`;
 
 function select(id) {
     selected = true;
@@ -19,40 +49,34 @@ function select(id) {
     // option.style.color = "#FBFBF5";
 }
 
-function submit(id) {}
+function submit(id) {
+    let choices = document.getElementsByClassName("choice");
+    for (let i = 0; i < choices.length; i++) {
+        choices[i].classList.remove("selected");
+        choices[i].classList.remove("wrong-selected");
+        choices[i].classList.add("secondary-btn");
+    }
+    let current = document.getElementById(id);
+    current.classList.remove("secondary-btn");
+    let message = document.getElementById("display-message");
+    let nextQuestion = document.getElementById("next-question");
+    if (current.innerHTML === images[noteIndex].answer) {
+        current.classList.add("selected");
+        message.innerHTML = "Good Job!";
+        if (firstAttempt === true) {
+            correct++;
+            firstAttempt = false;
+        }
+        scoreElem.innerHTML = `Score: ${correct}/${numOfQuestions}`;
+    } else {
+        current.classList.add("wrong-selected");
+        message.innerHTML = "Try Again!";
+        firstAttempt = false;
+    }
+}
 
 function startGame() {
     if (selected === true) {
         window.location.href = `game.html?questions=${numOfQuestions}`;
     }
-}
-
-const urlParams = new URLSearchParams(window.location.search);
-numOfQuestions = urlParams.get("questions");
-if (numOfQuestions === null) {
-    numOfQuestions = 10;
-}
-
-let questionElem = document.getElementById("question");
-questionElem.innerHTML = `Question: ${questionNumber}`;
-
-let scoreElem = document.getElementById("score");
-scoreElem.innerHTML = `Score: ${correct}/${numOfQuestions}`;
-
-const images = [
-    {
-        image: "./images/notes/middle_c.png",
-        choices: ["A", "D", "E", "C"],
-        answer: "C",
-    },
-];
-
-let noteIndex = Math.floor(Math.random() * images.length);
-
-let image = document.getElementById("note-image"); //
-image.src = images[noteIndex].image;
-
-for (let i = 1; i < 5; i++) {
-    let answerChoice = document.getElementById(`answer-${i}`);
-    answerChoice.innerHTML = images[noteIndex].choices[i - 1];
 }

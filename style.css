@@ -125,6 +125,12 @@ div {
     border: none;
 }
 
+.wrong-selected {
+    background-color: #9c9fa0;
+    color: #fbfbf5;
+    border: none;
+}
+
 /*
  * Extra utilities
  */
