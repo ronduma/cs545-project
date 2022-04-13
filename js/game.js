@@ -91,10 +91,10 @@ if (numOfQuestions === null) {
 }
 
 let questionElem = document.getElementById("question");
-questionElem.innerHTML = `Question: ${questionNumber}`;
+questionElem.innerHTML = `Question: ${questionNumber} / ${numOfQuestions}`;
 
 let scoreElem = document.getElementById("score");
-scoreElem.innerHTML = `Score: ${correct}/${numOfQuestions}`;
+scoreElem.innerHTML = `Score: ${correct}`;
 
 function select(id) {
     selected = true;
@@ -124,12 +124,14 @@ function submit(id) {
         current.classList.remove("secondary-btn");
         let message = document.getElementById("display-message");
         let nextQuestion = document.getElementById("next-question");
+        nextQuestion.classList.add("primary-btn");
+        nextQuestion.classList.add("rounded-pill");
         if (current.innerHTML === images[noteIndex].answer) {
             current.classList.add("selected");
             message.innerHTML = "Good Job!";
             if (firstAttempt === true) {
                 correct++;
-                scoreElem.innerHTML = `Score: ${correct}/${numOfQuestions}`;
+                scoreElem.innerHTML = `Score: ${correct}`;
                 firstAttempt = false;
             }
             nextQuestion.style.display = "block";
@@ -158,7 +160,7 @@ function changeQuestion() {
     finishedQuestion = false;
     firstAttempt = true;
     questionNumber++;
-    questionElem.innerHTML = `Question: ${questionNumber}`;
+    questionElem.innerHTML = `Question: ${questionNumber} / ${numOfQuestions}`;
     let nextQuestion = document.getElementById("next-question");
     nextQuestion.style.display = "none";
     noteIndex = Math.floor(Math.random() * images.length);
