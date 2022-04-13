@@ -131,6 +131,15 @@ div {
     border: none;
 }
 
+#note-image {
+    height: 350px;
+}
+
+.col {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+}
+
 /*
  * About
  */ 
@@ -240,3 +249,4 @@ img {
 .red {
     background-color: red;
 } */
+

@@ -12,6 +12,66 @@ const images = [
         choices: ["A", "D", "E", "C"],
         answer: "C",
     },
+    {
+        image: "./images/notes/A4.svg",
+        choices: ["B", "A", "C", "F"],
+        answer: "A"
+    },
+    {
+        image: "./images/notes/B4.svg",
+        choices: ["G", "E", "C", "B"],
+        answer: "B"
+    },
+    {
+        image: "./images/notes/C4.svg",
+        choices: ["C", "B", "G", "F"],
+        answer: "C"
+    },
+    {
+        image: "./images/notes/C5.svg",
+        choices: ["B", "A", "E", "C"],
+        answer: "C"
+    },
+    {
+        image: "./images/notes/D4.svg",
+        choices: ["D", "F", "E", "A"],
+        answer: "D"
+    },
+    {
+        image: "./images/notes/D5.svg",
+        choices: ["G", "D", "A", "F"],
+        answer: "D"
+    },
+    {
+        image: "./images/notes/E4.svg",
+        choices: ["F", "G", "B", "E"],
+        answer: "E"
+    },
+    {
+        image: "./images/notes/E5.svg",
+        choices: ["A", "C", "E", "B"],
+        answer: "E"
+    },
+    {
+        image: "./images/notes/F4.svg",
+        choices: ["B", "G", "F", "A"],
+        answer: "F"
+    },
+    {
+        image: "./images/notes/F5.svg",
+        choices: ["E", "F", "A", "C"],
+        answer: "F"
+    },
+    {
+        image: "./images/notes/G4.svg",
+        choices: ["A", "G", "B", "D"],
+        answer: "G"
+    },
+    {
+        image: "./images/notes/G5.svg",
+        choices: ["D", "F", "G", "A"],
+        answer: "G"
+    },
 ];
 
 let noteIndex = Math.floor(Math.random() * images.length);
