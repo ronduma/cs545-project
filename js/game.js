@@ -72,26 +72,6 @@ function submit(id) {
             }
             nextQuestion.style.display = "block";
             finishedQuestion = true;
-            // if (finishedQuestion === false) {
-            //     const nextButton = document.createElement("button");
-            //     nextButton.innerHTML = "Next Question";
-            //     nextButton.onclick = function () {
-            //         noteIndex = Math.floor(Math.random() * images.length);
-            //         image.src = images[noteIndex].image;
-
-            //         for (let i = 1; i < 5; i++) {
-            //             let answerChoice = document.getElementById(`answer-${i}`);
-            //             answerChoice.innerHTML = images[noteIndex].choices[i - 1];
-            //         }
-            //         if (nextQuestion.style.display === "none") {
-            //             nextQuestion.style.display = "block";
-            //         } else {
-            //             nextQuestion.style.display = "none";
-            //         }
-            //     };
-            //     nextQuestion.appendChild(nextButton);
-            // }
-            // finishedQuestion = true;
         } else {
             current.classList.add("wrong-selected");
             message.innerHTML = "Try Again!";
