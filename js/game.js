@@ -4,6 +4,8 @@ let correct = 0;
 let numOfQuestions;
 let firstAttempt = true;
 let finishedQuestion = false;
+let startTime = Date.now();
+let endTime;
 const images = [
     {
         image: "./images/notes/middle_c.png",
@@ -90,6 +92,7 @@ function changeQuestion() {
     if (questionNumber == numOfQuestions) {
         let gameQuestions = document.getElementById("game-questions");
         gameQuestions.remove();
+        endTime = Date.now();
         displayScore();
     }
     finishedQuestion = false;
@@ -135,9 +138,9 @@ function displayScore() {
     <div class="card">
     <div class="card-body">
       <h4 class="card-title">Results</h4>
-      <p>Score</p>
-      <p>Percent Correct</p>
-      <p>Time</p>
+      <p>Score ${correct}</p>
+      <p>Percent Correct ${correct}/${numOfQuestions}</p>
+      <p>Time ${(endTime - startTime) / 1000} seconds</p>
     </div>
   </div>
     `;
