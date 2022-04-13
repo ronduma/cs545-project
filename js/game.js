@@ -6,13 +6,46 @@ let firstAttempt = true;
 let finishedQuestion = false;
 let startTime = Date.now();
 let endTime;
-const images = [
+
+const notes = ["C", "D", "E", "F", "G", "A", "B"];
+
+let images = [
     {
         image: "./images/notes/middle_c.png",
-        choices: ["A", "D", "E", "C"],
+        choices: ["C"],
         answer: "C",
     },
 ];
+
+function shuffle(array) {
+    let currentIndex = array.length,
+        randomIndex;
+
+    // While there remain elements to shuffle.
+    while (currentIndex != 0) {
+        // Pick a remaining element.
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        // And swap it with the current element.
+        [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex],
+            array[currentIndex],
+        ];
+    }
+
+    return array;
+}
+
+for (let elem of images) {
+    while (elem.choices.length < 4) {
+        let randomIndex = Math.floor(Math.random() * notes.length);
+        if (notes[randomIndex] !== elem.answer) {
+            elem.choices.push(notes[randomIndex]);
+        }
+    }
+    shuffle(elem.choices);
+}
 
 let noteIndex = Math.floor(Math.random() * images.length);
 
@@ -104,6 +137,16 @@ function changeQuestion() {
     noteIndex = Math.floor(Math.random() * images.length);
 
     image.src = images[noteIndex].image;
+
+    for (let elem of images) {
+        while (elem.choices.length < 4) {
+            let randomIndex = Math.floor(Math.random() * notes.length);
+            if (notes[randomIndex] !== elem.answer) {
+                elem.choices.push(notes[randomIndex]);
+            }
+        }
+        shuffle(elem.choices);
+    }
 
     for (let i = 1; i < 5; i++) {
         let answerChoice = document.getElementById(`answer-${i}`);
