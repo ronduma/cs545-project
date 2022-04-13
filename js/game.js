@@ -1,5 +1,7 @@
 let selected = false;
-let numOfQuestions;
+let questionNumber = 1;
+let correct = 0;
+let numOfQuestions = 10;
 
 function select(id) {
     selected = true;
@@ -21,10 +23,18 @@ function submit(id) {}
 
 function startGame() {
     if (selected === true) {
-        window.location.href = "game.html";
-        console.log(numOfQuestions);
+        window.location.href = `game.html?questions=${numOfQuestions}`;
     }
 }
+
+const urlParams = new URLSearchParams(window.location.search);
+numOfQuestions = urlParams.get("questions");
+
+let questionElem = document.getElementById("question");
+questionElem.innerHTML = `Question: ${questionNumber}`;
+
+let scoreElem = document.getElementById("score");
+scoreElem.innerHTML = `Score: ${correct}/${numOfQuestions}`;
 
 const images = [
     {
