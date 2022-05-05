@@ -10,62 +10,62 @@ const images = [
     {
         image: "./images/notes/A4.svg",
         choices: ["B", "A", "C", "F"],
-        answer: "A"
+        answer: "A",
     },
     {
         image: "./images/notes/B4.svg",
         choices: ["G", "E", "C", "B"],
-        answer: "B"
+        answer: "B",
     },
     {
         image: "./images/notes/C4.svg",
         choices: ["C", "B", "G", "F"],
-        answer: "C"
+        answer: "C",
     },
     {
         image: "./images/notes/C5.svg",
         choices: ["B", "A", "E", "C"],
-        answer: "C"
+        answer: "C",
     },
     {
         image: "./images/notes/D4.svg",
         choices: ["D", "F", "E", "A"],
-        answer: "D"
+        answer: "D",
     },
     {
         image: "./images/notes/D5.svg",
         choices: ["G", "D", "A", "F"],
-        answer: "D"
+        answer: "D",
     },
     {
         image: "./images/notes/E4.svg",
         choices: ["F", "G", "B", "E"],
-        answer: "E"
+        answer: "E",
     },
     {
         image: "./images/notes/E5.svg",
         choices: ["A", "C", "E", "B"],
-        answer: "E"
+        answer: "E",
     },
     {
         image: "./images/notes/F4.svg",
         choices: ["B", "G", "F", "A"],
-        answer: "F"
+        answer: "F",
     },
     {
         image: "./images/notes/F5.svg",
         choices: ["E", "F", "A", "C"],
-        answer: "F"
+        answer: "F",
     },
     {
         image: "./images/notes/G4.svg",
         choices: ["A", "G", "B", "D"],
-        answer: "G"
+        answer: "G",
     },
     {
         image: "./images/notes/G5.svg",
         choices: ["D", "F", "G", "A"],
-        answer: "G"
+        answer: "G",
     },
 ];
 
@@ -129,6 +129,10 @@ function submit(id) {
                 scoreElem.innerHTML = `Score: ${correct}`;
                 firstAttempt = false;
             }
+            if (questionNumber == numOfQuestions) {
+                console.log("test");
+                nextQuestion.innerHTML = "Show Results";
+            }
             nextQuestion.style.display = "block";
             finishedQuestion = true;
         } else {
@@ -151,6 +155,7 @@ function changeQuestion() {
         gameQuestions.remove();
         endTime = Date.now();
         displayScore();
+        return;
     }
     finishedQuestion = false;
     firstAttempt = true;
@@ -181,35 +186,26 @@ function changeQuestion() {
 function displayScore() {
     let gameResults = document.getElementById("game-results");
     let container = document.createElement("div");
-    container.className = "container";
-    let row = document.createElement("div");
-    row.className = "row";
-    let img1div = document.createElement("div");
-    img1div.className = "col";
+    container.className = "result-container";
     let img1 = document.createElement("img");
     img1.src = "./images/left_notes.png";
-    img1div.appendChild(img1);
+    img1.className = "left-note";
     let scorediv = document.createElement("div");
-    scorediv.className = "col";
+    scorediv.className = "result-div";
     scorediv.innerHTML = `
-    <div class="card">
-    <div class="card-body">
-      <h4 class="card-title">Game Results</h4>
-      <p>Score ${correct}</p>
-      <p>Percent Correct ${correct}/${numOfQuestions}</p>
-      <p>Time ${(endTime - startTime) / 1000} seconds</p>
-    </div>
+    <div class="jumbotron">
+      <h1 class="display-3">Game Results</h1>
+      <p>Score: ${correct}</p>
+      <p>Percent Correct: ${correct}/${numOfQuestions}</p>
+      <p>Time: ${(endTime - startTime) / 1000} seconds</p>
   </div>
     `;
-    let img2div = document.createElement("div");
-    img2div.className = "col";
     let img2 = document.createElement("img");
     img2.src = "./images/right_notes.png";
-    img2div.appendChild(img2);
+    img2.className = "right-note";
 
-    row.appendChild(img1div);
-    row.appendChild(scorediv);
-    row.appendChild(img2div);
-    container.appendChild(row);
+    container.appendChild(img1);
+    container.appendChild(scorediv);
+    container.appendChild(img2);
     gameResults.appendChild(container);
 }
