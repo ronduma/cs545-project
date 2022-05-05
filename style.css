@@ -135,7 +135,8 @@ div {
     height: 350px;
 }
 
-.col, #display-message {
+.col,
+#display-message {
     font-family: "Inter", sans-serif;
     font-size: 20px;
 }
@@ -153,9 +154,9 @@ div {
 
 /*
  * About
- */ 
+ */
 .pfp {
-  height:6vw;
+    height: 6vw;
 }
 
 /*
@@ -220,13 +221,13 @@ div {
 }
 
 .sidenav {
-    height: 641px;
+    height: 500px;
     width: 360px;
-    position: absolute;
-    top: 149px;
+    position: fixed;
+    top: 110px;
     left: 0;
     background-color: #f8f9f0;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     padding-top: 20px;
 }
 
@@ -261,3 +262,27 @@ img {
     background-color: red;
 } */
 
+#learnContent {
+    padding-left: 380px;
+}
+
+#piano {
+    height: 500px;
+}
+
+.result-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-note {
+    margin-right: 20px;
+}
+
+/* .result-div {
+} */
+
+.right-note {
+    margin-left: 20px;
+}
