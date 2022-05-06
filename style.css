@@ -23,6 +23,8 @@
             format("svg");
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap');
+
 /* 
  * General
  */
@@ -177,6 +179,7 @@ div {
  */
 
 #logo {
+    font-family: 'Oleo Script', cursive;
     font-weight: 400;
 }
 

@@ -6,6 +6,7 @@
 <line x1="9" y1="75.5" x2="185" y2="75.5" stroke="black"/>
 <line x1="9" y1="92.5" x2="185" y2="92.5" stroke="black"/>
 <rect width="75" height="127.83" fill="url(#pattern0)"/>
+<path d="M101 111H141" stroke="black"/>
 <ellipse cx="121.745" cy="110.367" rx="10.6435" ry="8.5" transform="rotate(-17.9524 121.745 110.367)" fill="black"/>
 </g>
 <defs>
